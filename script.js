@@ -93,7 +93,7 @@ export function removeStudent({ email }) {
       throw new Error('Aluno não encontrado.')
     }
 
-    students = students.filter((student, index) => index !== studentIndex);
+    students = students.filter((student, index) => index !== indexStudent);
 
   } catch (error) {
     console.log(error.message)
@@ -335,3 +335,6 @@ console.log(getStudentsWithExpectedAverage())
 
 console.log("Relatório completo")
 console.log(generateReport())
+
+removeStudent({email: 'breno@dias.com' })
+console.log(students)
